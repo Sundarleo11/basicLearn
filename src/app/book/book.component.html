@@ -1,0 +1,23 @@
+<h1>Natural Book !!!</h1>
+<!-- <button (click)="onsave()">Submit</button> -->
+<button (click)="toggle()">
+    <span *ngIf="!isShow">Show Book</span>
+    <span *ngIf="isShow">Hide Book</span>
+</button>
+<ul *ngIf="isShow">
+    <ng-container *ngFor="let singleBook of Books;let i=index">
+     <!-- <app-booklib (bookEmiiter)="AddToCard($event)" [book]="singleBook"></app-booklib> -->
+     <app-booklib  [book]="singleBook"></app-booklib>
+  
+        
+</ng-container>
+    <!-- <li>
+        <img src={{src1}}
+        alt={{name}}
+        width="100px">
+        {{name }} by {{book}}
+    </li> -->
+</ul>
+
+<!-- <input type="text" [(ngModel)]="Myname" />
+<div>{{Myname}}</div> -->

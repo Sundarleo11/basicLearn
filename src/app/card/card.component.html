@@ -1,0 +1,11 @@
+<!-- <h3>AddCard</h3> -->
+<!-- <div>{{Card().length}}</div> -->
+
+<div *ngIf="Card().length>0">
+    <div *ngFor="let book of Card()">
+        <p>{{book.name}}</p>
+
+    </div>
+</div>
+<div *ngIf="Card().length==0">No Book is Cart</div>
+<!-- <a routerLink="">Home</a> -->
